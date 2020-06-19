@@ -7,4 +7,4 @@ This is a serverless quiz app. Ionic5 and Angular9, Material Design used.
 - Email Composer Cordova Plugin to send result
 
 **Screen shot**
-![](/readme/ionic-quiz.gif)
+![](/readme/ionic-quiz.gif =300*)

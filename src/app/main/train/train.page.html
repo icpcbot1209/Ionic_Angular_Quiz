@@ -1,0 +1,68 @@
+<ion-content class="ion-padding">
+  <!-- <app-toc></app-toc>
+  <app-onepage></app-onepage> -->
+  <ion-menu side="start" content-id="main-content" type="overlay" class="custom" *ngIf="codeRule.rules.length>=2">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Contents</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item button detail="false" *ngFor="let rule of codeRule.rules" (click)="onClickCategory(rule)">
+          {{rule}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>        
+        <ion-menu-button slot="start" *ngIf="codeRule.rules.length>=2"></ion-menu-button>
+        
+        <ion-title>{{category}}</ion-title>
+        
+        <ion-spinner *ngIf="isBusy" slot="end"></ion-spinner>
+        
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div id="hhhh"></div>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="dark">
+        <div style="text-align: center;">
+          {{category}} ({{pageNum}} of {{pageCnt}})
+        </div>
+        <ion-button color="light" slot="start" (click)="showPrevPage()" [disabled]="isBusy">Prev</ion-button>
+        <ion-button color="light" slot="end" (click)="showNextPage()"  [disabled]="isBusy">Next</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+
+<!--     
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Table Of Contents</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item button detail="false" *ngFor="let rule of codeRule.rules"
+        (click)="onClickCategory(rule)">
+          {{rule}}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{category}} {{pageNum}}/{{pageCnt}}</ion-card-subtitle>
+      <ion-card-content>
+        <div id="hhhh"></div>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card> -->
+
+</ion-content>

@@ -1,0 +1,28 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <ion-icon name="close-circle-outline" color="danger" style="font-size: 50px;"></ion-icon>
+  <hr />
+  <ion-label color="danger" style="font-size: x-large;">
+    Failed
+  </ion-label>
+  <hr />
+  <strong>Score: {{testResult.passRate*100}}%</strong>
+  <hr />
+
+  <ion-card *ngIf="testResult.arrWrong.length>0">
+    <ion-card-header>
+      <strong>Failed ones</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let quiz of testResult.arrWrong">
+          <ion-text>{{quiz.question}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="onClickRetry()">
+    <ion-icon name="refresh-outline"></ion-icon>
+    Retry
+  </ion-button>
+</div>

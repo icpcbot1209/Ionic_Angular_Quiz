@@ -1,0 +1,25 @@
+
+<div style="height:100%; display: flex; flex-direction: column; align-items: center;">
+  <h1>Ready To Test?</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input matInput #fullname placeholder="Nick Wild"
+    type="text" autocomplete="off">
+  </mat-form-field>
+
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Email Address</mat-label>
+    <input matInput #email placeholder="nick@gmail.com" [(ngModel)]="mailFrom"
+    type="email" autocomplete="off">
+  </mat-form-field> -->
+
+
+  <ion-chip color="warning">
+    <ion-icon slot="start" name="alert-circle-outline"></ion-icon>
+    Don't leave page during the test!
+  </ion-chip>
+
+  <ion-button style="width:200px;" color="primary" (click)="onClickStart(fullname.value)">Start Test</ion-button>
+
+</div>

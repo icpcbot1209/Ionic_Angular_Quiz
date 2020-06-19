@@ -1,0 +1,29 @@
+<div *ngIf="test.arrQuiz.length>0" style="height:100%;">
+ 
+  <strong>Question {{ iStep+1 }} of {{ test.arrQuiz.length }}</strong>
+  
+  <ion-text color="primary"><h2>{{ test.arrQuiz[iStep].question }}</h2></ion-text>
+
+  <div *ngIf="test.arrQuiz[iStep].answer.length>1">
+    <ion-list>
+      <ion-item *ngFor="let checkData of arrCheckDataOfStep">
+        <ion-checkbox slot="start" [(ngModel)]="checkData.isChecked"></ion-checkbox>
+        <ion-label>{{ checkData.sentence }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="test.arrQuiz[iStep].answer.length==1">
+    <ion-list>
+      <ion-radio-group (ionChange)="onChangeRadio($event)" value={{choosenLabel}}>
+        <ion-item *ngFor="let checkData of arrCheckDataOfStep">
+          <ion-label>{{ checkData.sentence }}</ion-label>
+          <ion-radio slot="start" value={{checkData.label}}></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  
+  <ion-button (click)="onClickNext()" style="float: right;">Next</ion-button>
+  
+</div>

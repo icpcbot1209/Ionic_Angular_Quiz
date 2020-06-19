@@ -1,0 +1,40 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <ion-icon name="checkmark-circle-outline" color="primary" style="font-size: 50px;"></ion-icon>
+  <hr/>
+  <ion-label color="primary" style="font-size: x-large;">
+    PASSED!
+  </ion-label>
+  <hr />
+
+  <hr />
+  <ion-badge color="success">
+    <ion-text style="font-size: larger;">Score: {{testResult.passRate*100}}%</ion-text>
+  </ion-badge>
+  <hr />
+
+  <ion-card *ngIf="testResult.arrWrong.length>0">
+    <ion-card-header>
+      <strong>Failed ones</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let quiz of testResult.arrWrong">
+          <ion-text>{{quiz.question}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <hr/>
+
+  <div style="display: flex; flex-direction: row; justify-content: space-around;">
+
+    <ion-button (click)="onClickRetry()">
+      <ion-icon name="refresh-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="onClickOpenEmailComposer()">
+      Send Result
+      <ion-icon name="send-outline" style="margin-left: 10px;"></ion-icon>
+    </ion-button>
+  </div>
+</div>

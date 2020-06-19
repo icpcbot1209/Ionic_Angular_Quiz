@@ -1,0 +1,140 @@
+{
+  "appName" : "Quiz",
+  "version" : "1.0",
+  "adminEmail" : "icpcbot1209@gmail.com",
+
+  "arrCategory" : ["Economy", "Programming"],
+
+
+  "arrCodeRule": [
+    {
+      "code": "111111",
+      "about": "This Quiz will teach you about Economy. After this quiz you will not have any questions about solving issues.",
+      "rules": [
+        "Economy"
+      ],
+      "numQuiz": 4,
+      "minPassRate": 0.75
+    },
+    {
+      "code": "111222",
+      "about": "This Quiz will teach you about programming and Economy. After this quiz you will not have any questions about solving issues.",
+      "rules": [
+        "Economy",
+        "Programming"
+      ],
+      "numQuiz": 5,
+      "minPassRate": 0.25
+    },
+    {
+      "code": "222222",
+      "about": "This Quiz will teach you about programming. After this quiz you will not have any questions about solving issues.",
+      "rules": [
+        "Programming"
+      ],
+      "numQuiz": 3,
+      "minPassRate": 0.75
+    }
+  ],
+
+  "arrQuizAll" : [
+    {
+      "category": "Economy",
+      "question": "What is an asset?",
+      "arrOption": [
+        "Someting valuable",
+        "Something makes money for me",
+        "What I have",
+        "all of above",
+        "none of above"
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "Economy",
+      "question": "Elon Musk has launched...",
+      "arrOption": [
+        "SpaceX",
+        "Solar City",
+        "Tesla",
+        "Neural Link",
+        "Amazon"
+      ],
+      "answer": "ABCD"
+    },
+    {
+      "category": "Economy",
+      "question": "Which one is correct team name in NBA?",
+      "arrOption": [
+        "New York Bulls",
+        "Los Angeles Kings",
+        "Golden State Warriros",
+        "Huston Rocket"
+      ],
+      "answer": "D"
+    },
+    {
+      "category": "Programming",
+      "question": "5 + 7 = ?",
+      "arrOption": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "Programming",
+      "question": "12 - 8 = ?",
+      "arrOption": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "D"
+    },
+    {
+      "category": "Programming",
+      "question": "What does useState do in React?",
+      "arrOption": [
+        "It is a hook for using state",
+        "It is a function that I made",
+        "That is not a function",
+        "none of above"
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "Economy",
+      "question": "Elon Musk is a Native American.",
+      "arrOption": [
+        "Yes",
+        "No"
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "Programming",
+      "question": "Is Angular directive the extension of html element?",
+      "arrOption": [
+        "Yes",
+        "No"
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "Programming",
+      "question": "Stay hungry, stay foolish",
+      "arrOption": [
+        "Steve Jobs said.",
+        "Bill Gates said.",
+        "It is an old saying. Steve Jobs used it at Harvad."
+      ],
+      "answer": "C"
+    }
+  ]
+
+
+}

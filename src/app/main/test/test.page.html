@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Test </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <test-ready *ngIf="status===STATUS_TEST_READY" [test]="test" (startTest)="startTest($mailerName)"></test-ready>
+  
+  <test-testing *ngIf="status===STATUS_TEST_STARTED" [test]="test" (endTest)="endTest($event)"></test-testing>
+  <test-passed *ngIf="status===STATUS_TEST_PASSED" [testResult]="testResult" (retryTest)="readyTest()"
+    (sendResultEmail)="sendResultEmail()"
+  ></test-passed>
+  <test-failed *ngIf="status===STATUS_TEST_FAILED" [testResult]="testResult" (retryTest)="readyTest()">
+  </test-failed>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark" style="text-align: center;">
+    <ion-text>
+    </ion-text>
+    <ion-text *ngFor="let category of test.codeRule.rules">{{category}} </ion-text>
+  </ion-toolbar>
+</ion-footer>
+

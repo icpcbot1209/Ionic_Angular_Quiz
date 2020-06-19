@@ -1,0 +1,45 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+mat-form-field.mat-form-field.mat-white {
+&.mat-focused {
+  .mat-form-field-label {
+      color: #FAFAFA;
+  }
+  .mat-form-field-ripple {
+      background-color: #FAFAFA !important;
+  }
+}
+.mat-form-field-label,.mat-form-field-label.mat-focused,
+.mat-form-field.mat-focused.matform-field-should-float {
+    color: #FAFAFA;
+}
+.mat-form-field-underline, .mat-form-field-underline.mat-focused {
+    background-color: #FAFAFA;
+  }
+}

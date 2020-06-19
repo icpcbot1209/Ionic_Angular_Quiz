@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true" color="dark">
+  <div *ngIf="!data"> Loading ... </div>
+
+  <div id="container" *ngIf="data">
+    <ion-img [src]="'assets/logo.png'" style="width: 50vmin; margin:auto; margin-bottom: 50px;"></ion-img>
+    <h1>{{data.appName}}</h1>
+    <h3>Revision {{data.version}}</h3>
+
+    <mat-form-field appearance="outline" style="color: white;">
+      <mat-label style="color: white;">enter code</mat-label>
+      <input matInput #code placeholder="XXXX-XXXX-XXXX" autocomplete="off" value="111222"
+        (keydown.enter)="doSubmit(code.value)">
+
+      <button mat-icon-button color="secondary" (click)="doSubmit(code.value)"
+       matSuffix><mat-icon>navigate_next</mat-icon></button>
+    </mat-form-field>
+
+
+  </div>
+</ion-content>

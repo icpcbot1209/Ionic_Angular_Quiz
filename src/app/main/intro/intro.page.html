@@ -1,0 +1,49 @@
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Overview</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text style="font-weight: 500; font-size: medium;">
+        {{codeRule.about}}
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Categories</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let rule of codeRule.rules">
+        <ion-text class="ion-padding">{{rule}}</ion-text>
+      </ion-item>
+
+      <ion-button (click)="gotoTrain()"  expand="block">
+        <ion-icon name="play-outline"></ion-icon>
+        Start Train
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Test</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-text>{{codeRule.numQuiz}} questions</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>{{codeRule.minPassRate*100}}% is the min rate to pass</ion-text>
+      </ion-item>
+
+      <ion-button color="dark" (click)="gotoTest()"  expand="block">
+        <ion-icon name="play-outline"></ion-icon>Start Test
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
